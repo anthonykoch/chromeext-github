@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "Github",
+	"version": "1.0",
+	"background":
+	{
+		"scripts":
+		[
+			"js/background.js"
+		]
+	},
+	"content_scripts":
+	[
+		{
+			"js":
+			[
+				"js/content.js"
+			],
+			"matches":
+			[
+				"<all_urls>"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+		"contextMenus",
+		"tabs",
+		"<all_urls>"
+	],
+	"icons": {
+		"16": "images/github16.png",
+		"48": "images/github48.png"
+	}
+}
